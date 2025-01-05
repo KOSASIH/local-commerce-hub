@@ -1,5 +1,3 @@
-# src/constants.py
-
 """
 Pi Coin Configuration Constants
 This module contains constants related to the Pi Coin cryptocurrency.
@@ -9,7 +7,7 @@ This module contains constants related to the Pi Coin cryptocurrency.
 PI_COIN_SYMBOL = "Pi"  # Symbol for Pi Coin
 
 # Pi Coin Value
-PI_COIN_VALUE = 314159  # Fixed value of Pi Coin in USD
+PI_COIN_VALUE = 314159.00  # Fixed value of Pi Coin in USD
 
 # Pi Coin Supply
 PI_COIN_SUPPLY = 100_000_000_000  # Total supply of Pi Coin
@@ -62,5 +60,25 @@ PI_COIN_API_KEY_EXPIRATION = 3600  # API key expiration time in seconds
 # Pi Coin Regulatory Compliance
 PI_COIN_KYC_REQUIRED = True  # Whether KYC is required for transactions
 PI_COIN_COMPLIANCE_JURISDICTIONS = ["US", "EU", "UK"]  # Jurisdictions for compliance
+
+# Pi Coin Advanced Features
+PI_COIN_MAX_TRANSACTION_PER_BLOCK = 1000  # Maximum transactions allowed per block
+PI_COIN_FEE_ADJUSTMENT_INTERVAL = 100  # Interval for adjusting transaction fees based on network load
+PI_COIN_MINIMUM_BALANCE_FOR_TRANSACTIONS = 0.01  # Minimum balance required to initiate a transaction
+
+# Pi Coin Network Security Enhancements
+PI_COIN_DDOS_PROTECTION_ENABLED = True  # Enable DDoS protection mechanisms
+PI_COIN_ANOMALY_DETECTION_ENABLED = True  # Enable anomaly detection for transactions
+
+# Pi Coin Community Governance
+PI_COIN_VOTING_PERIOD_DAYS = 30  # Duration for governance voting periods
+PI_COIN_VOTING_QUORUM_PERCENTAGE = 20  # Minimum percentage of votes required for a decision
+
+# Pi Coin Future-Proofing
+PI_COIN_VERSION = "1.0.0"  # Current version of the Pi Coin protocol
+PI_COIN_UPGRADE_SCHEDULE = {  # Schedule for future upgrades
+    "2025-01-01": "Upgrade to version 2.0.0 with enhanced features",
+    "2026-01-01": "Upgrade to version 3.0.0 with scalability improvements"
+}
 
 # Additional constants can be added here as needed
