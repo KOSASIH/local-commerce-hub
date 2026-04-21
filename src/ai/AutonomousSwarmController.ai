@@ -1,0 +1,21 @@
+class AutonomousSwarmController {
+  constructor() {
+    this.guardian = new SuperGuardianAgent();
+    this.swarmActive = true;
+    this.startSwarmPatrol();
+  }
+
+  startSwarmPatrol() {
+    setInterval(() => {
+      this.guardian.commandAllAgents({ type: 'PATROL_SCAN' });
+    }, 1000);
+    
+    this.monitorPiNetwork();
+  }
+
+  monitorPiNetwork() {
+    this.guardian.subAgents.forEach(agent => {
+      agent.monitorPiTransactions();
+    });
+  }
+}
