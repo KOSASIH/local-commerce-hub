@@ -26,3 +26,4 @@ class PiMerchantHub {
 }
 
 module.exports = PiMerchantHub;
+
