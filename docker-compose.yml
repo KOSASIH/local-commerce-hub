@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  pi-fortress:
+    build: .
+    ports:
+      - "3000:3000"
+      - "8081:8081"  # Threat Radar WS
+    environment:
+      - NODE_ENV=production
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+      - pi-node
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  pi-node:
+    image: pi-network/mainnet-node:latest
+    ports:
+      - "31400:31400"
