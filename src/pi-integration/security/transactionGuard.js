@@ -13,4 +13,3 @@ class TransactionGuard {
     return this.amlCheck(wallet, amount);
   }
 }
-
