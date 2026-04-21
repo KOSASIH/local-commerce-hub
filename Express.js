@@ -1,14 +1,16 @@
 const express = require('express');
-const PiShieldMiddleware = require('./middleware/PiShieldMiddleware');
-const shield = new PiEcosystemShield();
+const Web3SymbolShield = require('./middleware/Web3SymbolShield');
 
 const app = express();
 
-// AUTO-PROTECT ALL ENDPOINTS
-app.use(PiShieldMiddleware(shield));
+// FULL SYSTEM PROTECTION
+app.use(Web3SymbolShield());
 
-app.post('/products', (req, res) => {
-  // Automatically protected!
-  // π → PI auto-corrected
-  console.log('✅ PI Compliant Product:', req.body.price);
+// Test endpoints
+app.post('/dex/swap', (req, res) => {
+  res.json({ success: true, protected: '✅ Symbol Shield Active' });
+});
+
+app.listen(3000, () => {
+  console.log('🌌 Web3 Global Symbol Shield ACTIVE');
 });
